@@ -6,12 +6,13 @@ task :default => 'ios:run'
 
 DOCS_DIR          = '../../docs/Code'
 TESTS_DIR         = 'Tests'
+WAXSIM_PATH       = '~/.raku/tools/waxsim'
 PROJECT_NAME      = '___PROJECTNAME___'
+APPLEDOC_PATH     = '~/.raku/tools/appledoc'
 APPLE_DOCS_DIR    = "#{DOCS_DIR}/appledoc"
 SCAN_BUILD_PATH   = '~/.raku/tools/checker-257/scan-build'
 CLANG_REPORTS_DIR = "#{DOCS_DIR}/static_analysis/"
 TESTS_REPORTS_DIR = "#{DOCS_DIR}/test_results/"
-
 
 namespace :ios do
   
@@ -28,7 +29,7 @@ namespace :ios do
     puts 'Generating documentation' 
     #we need to continue even in case of warnings. 
     #Appledoc returns an error even when it only founds warnings https://github.com/tomaz/appledoc/issues/100   
-    sh %{appledoc .} do |ok, res|
+    sh %{APPLEDOC_PATH .} do |ok, res|
       if ok
         puts "Documentation generated in #{APPLE_DOCS_DIR}"
       else
@@ -72,7 +73,7 @@ namespace :ios do
   end
   
   task :run => :compile do
-    sh "waxsim build/Debug-iphonesimulator/#{PROJECT_NAME}.app"
+    sh "#{WAXSIM_PATH} build/Debug-iphonesimulator/#{PROJECT_NAME}.app"
   end
   
   desc 'Compiles the Tests target'
@@ -93,7 +94,7 @@ namespace :ios do
       ENV['WRITE_JUNIT_XML'] = 'YES'
       ENV['GHUNIT_AUTORUN']  = 'YES'
       ENV['GHUNIT_AUTOEXIT']  = 'YES'
-      system('waxsim build/Debug-iphonesimulator/Tests.app') 
+      system("#{WAXSIM_PATH} build/Debug-iphonesimulator/Tests.app") 
       move_tests_reports     
     end
   end
