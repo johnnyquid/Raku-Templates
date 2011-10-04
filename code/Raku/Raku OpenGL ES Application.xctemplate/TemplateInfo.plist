@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ancestors</key>
+	<array>
+		<string>raku.cocoaTouchFamiliedApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Definitions</key>
+	<dict>
+		<key>Views/RKUEAGLView.h</key>
+		<dict>
+			<key>Group</key>
+			<string>Views</string>
+			<key>Path</key>
+			<string>EAGLView.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Views/RKUEAGLView.m</key>
+		<dict>
+			<key>Group</key>
+			<string>Views</string>
+			<key>Path</key>
+			<string>EAGLView.m</string>
+		</dict>
+		<key>Helpers/Shaders/RKUShader.fsh</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Helpers</string>
+				<string>Shaders</string>
+			</array>
+			<key>Path</key>
+			<string>Shader.fsh</string>
+		</dict>
+		<key>Helpers/Shaders/RKUShader.vsh</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Helpers</string>
+				<string>Shaders</string>
+			</array>
+			<key>Path</key>
+			<string>Shader.vsh</string>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:methods:viewController</key>
+		<string>@property (nonatomic, retain) IBOutlet RKU___PACKAGENAMEASIDENTIFIER___ViewController *viewController;
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:*:addViewControllerView</key>
+		<string>self.window.rootViewController = self.viewController;
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:*:startAnimation</key>
+		<string>[self.viewController startAnimation];
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:*:stopAnimation</key>
+		<string>[self.viewController stopAnimation];
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillResignActive</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (void)applicationWillResignActive:(UIApplication *)application
+{</string>
+			<key>End</key>
+			<string>}
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<string>Controllers</string>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___ViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.m</key>
+		<dict>
+			<key>Group</key>
+			<string>Controllers</string>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___ViewController.m</string>
+		</dict>
+		<key>Config/___PACKAGENAME___-Info.plist:UIStatusBarHidden</key>
+		<string>&lt;key&gt;UIStatusBarHidden&lt;/key&gt;
+&lt;true/&gt;
+</string>
+	</dict>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses an OpenGL ES-based view. It provides a view into which you render your OpenGL ES scene, and a timer to allow you to animate the view.</string>
+	<key>Identifier</key>
+	<string>raku.openGLESApplication</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Nodes</key>
+	<array>
+		<string>Config/___PACKAGENAME___-Info.plist:UIStatusBarHidden</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:class:RKU___PACKAGENAMEASIDENTIFIER___ViewController</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:methods:viewController</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:import:RKUEAGLView.h</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:import:RKU___PACKAGENAMEASIDENTIFIER___ViewController.h</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:synthesize:viewController = _viewController</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions:addViewControllerView</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillTerminate:stopAnimation</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationDidBecomeActive:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationDidBecomeActive:startAnimation</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillResignActive:stopAnimation</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:dealloc:_viewController</string>
+		<string>Helpers/Shaders/RKUShader.fsh</string>
+		<string>Helpers/Shaders/RKUShader.vsh</string>
+		<string>Views/RKUEAGLView.h</string>
+		<string>Views/RKUEAGLView.m</string>
+		<string>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.h</string>
+		<string>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.m</string>
+		<string>Views/en.lproj/RKU___PACKAGENAMEASIDENTIFIER___ViewController.xib</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>deviceFamily</string>
+			<key>Units</key>
+			<dict>
+				<key>iPad</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Views/en.lproj/RKUMainWindow.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>MainWindowiPad.xib</string>
+						</dict>
+						<key>Views/en.lproj/RKU___PACKAGENAMEASIDENTIFIER___ViewController.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>___PACKAGENAMEASIDENTIFIER___ViewControlleriPad.xib</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>iPhone</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Views/en.lproj/RKUMainWindow.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>MainWindowiPhone.xib</string>
+						</dict>
+						<key>Views/en.lproj/RKU___PACKAGENAMEASIDENTIFIER___ViewController.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>___PACKAGENAMEASIDENTIFIER___ViewControlleriPhone.xib</string>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>Frameworks</key>
+			<array>
+				<string>QuartzCore</string>
+				<string>OpenGLES</string>
+			</array>
+			<key>SharedSettings</key>
+			<dict>
+				<key>GCC_THUMB_SUPPORT[arch=armv6]</key>
+				<string></string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

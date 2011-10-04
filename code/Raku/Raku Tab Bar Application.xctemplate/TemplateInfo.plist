@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ancestors</key>
+	<array>
+		<string>raku.cocoaTouchFamiliedApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Definitions</key>
+	<dict>
+		<key>Controllers/RKUFirstViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<string>Controllers</string>
+			<key>Path</key>
+			<string>FirstViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Controllers/RKUSecondViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<string>Controllers</string>
+			<key>Path</key>
+			<string>SecondViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:ivars</key>
+		<dict>
+			<key>Beginning</key>
+			<string>@interface RKU___PACKAGENAMEASIDENTIFIER___AppDelegate : NSObject &lt;UIApplicationDelegate, UITabBarControllerDelegate&gt;
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:methods:tabBarController</key>
+		<string>@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup</key>
+		<string>// Add the tab bar controller's current view as a subview of the window
+self.window.rootViewController = self.tabBarController;
+[self.window makeKeyAndVisible];
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:tabBarMethods</key>
+		<string>/*
+// Optional UITabBarControllerDelegate method.
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+}
+*/
+
+/*
+// Optional UITabBarControllerDelegate method.
+- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
+{
+}
+*/
+</string>
+	</dict>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses a tab bar. It provides a user interface configured with a tab bar controller, and a view controller for the first tab bar item.</string>
+	<key>Identifier</key>
+	<string>raku.tabBarApplication</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Nodes</key>
+	<array>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:methods:tabBarController</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:synthesize:tabBarController = _tabBarController</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:tabBarMethods</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:dealloc:_tabBarController</string>
+		<string>Controllers/RKUFirstViewController.h</string>
+		<string>Controllers/RKUFirstViewController.m</string>
+		<string>Controllers/RKUSecondViewController.h</string>
+		<string>Controllers/RKUSecondViewController.m</string>
+		<string>Views/en.lproj/RKUFirstView.xib</string>
+		<string>Views/en.lproj/RKUSecondView.xib</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>deviceFamily</string>
+			<key>Units</key>
+			<dict>
+				<key>iPad</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Controllers/RKUFirstViewController.m</key>
+						<dict>
+							<key>Group</key>
+							<string>Controllers</string>
+							<key>Path</key>
+							<string>FirstViewControlleriPad.m</string>
+						</dict>
+						<key>Controllers/RKUSecondViewController.m</key>
+						<dict>
+							<key>Group</key>
+							<string>Controllers</string>
+							<key>Path</key>
+							<string>SecondViewControlleriPad.m</string>
+						</dict>
+						<key>Views/en.lproj/RKUFirstView.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>FirstViewiPad.xib</string>
+						</dict>
+						<key>Views/en.lproj/RKUMainWindow.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>MainWindowiPad.xib</string>
+						</dict>
+						<key>Views/en.lproj/RKUSecondView.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>SecondViewiPad.xib</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>iPhone</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Controllers/RKUFirstViewController.m</key>
+						<dict>
+							<key>Group</key>
+							<string>Controllers</string>
+							<key>Path</key>
+							<string>FirstViewControlleriPhone.m</string>
+						</dict>
+						<key>Controllers/RKUSecondViewController.m</key>
+						<dict>
+							<key>Group</key>
+							<string>Controllers</string>
+							<key>Path</key>
+							<string>SecondViewControlleriPhone.m</string>
+						</dict>
+						<key>Views/en.lproj/RKUFirstView.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>FirstViewiPhone.xib</string>
+						</dict>
+						<key>Views/en.lproj/RKUMainWindow.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>MainWindowiPhone.xib</string>
+						</dict>
+						<key>Views/en.lproj/RKUSecondView.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>SecondViewiPhone.xib</string>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

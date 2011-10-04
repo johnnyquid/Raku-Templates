@@ -1,0 +1,6 @@
+@interface RKUMyTest : GHTestCase 
+{ 
+
+}
+
+@end

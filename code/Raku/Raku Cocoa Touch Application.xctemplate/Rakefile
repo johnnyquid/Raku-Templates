@@ -1,0 +1,131 @@
+require 'date'
+require 'fileutils'
+
+
+task :default => 'ios:run'
+
+DOCS_DIR          = '../../docs/Code'
+TESTS_DIR         = 'Tests'
+PROJECT_NAME      = '___PROJECTNAME___'
+APPLE_DOCS_DIR    = "#{DOCS_DIR}/appledoc"
+SCAN_BUILD_PATH   = '~/.raku/tools/checker-257/scan-build'
+CLANG_REPORTS_DIR = "#{DOCS_DIR}/static_analysis/"
+TESTS_REPORTS_DIR = "#{DOCS_DIR}/test_results/"
+
+
+namespace :ios do
+  
+  desc 'Downloads the dependencies of the project to the Libraries folder.'
+  task :setup_dependencies do
+    setup_framework 'CocoaLumberjackNSLogger.framework', 'git@github.com:rakumx/CocoaLumberjackNSLogger.framework.git'
+    setup_framework 'GHUnitIOS.framework', 'git@github.com:rakumx/GHUnitIOS.framework.git'
+    setup_framework 'BlocksKitFramework.framework', 'git@github.com:rakumx/BlocksKitFramework.framework.git'
+    puts 'Dependencies installed, please drag and drop the frameworks in Libraries to your project in XCode to use them.'
+  end  
+
+  desc "Generates the documentation of the project using appledoc into the folder #{APPLE_DOCS_DIR}"
+  task :documentation do
+    puts 'Generating documentation' 
+    #we need to continue even in case of warnings. 
+    #Appledoc returns an error even when it only founds warnings https://github.com/tomaz/appledoc/issues/100   
+    sh %{appledoc .} do |ok, res|
+      if ok
+        puts "Documentation generated in #{APPLE_DOCS_DIR}"
+      else
+        puts "Documentation generated in #{APPLE_DOCS_DIR}"
+      end
+    end    
+  end
+
+  desc "Runs clang scan-build static analizer the reports are stored in #{CLANG_REPORTS_DIR}"
+   task :analyze => :clean do
+     create_dir_if_not_exists DOCS_DIR
+     FileUtils.rm_rf CLANG_REPORTS_DIR
+     puts 'Running code static analysis.'
+     sh %{#{SCAN_BUILD_PATH} -k -o #{DOCS_DIR} xcodebuild -configuration Debug} do |ok, res|
+       if ok
+         move_analysis_reports
+         puts "Errors report stored in #{CLANG_REPORTS_DIR}"
+       else
+         puts 'No errors found in the project, no report will be generated'  
+       end      
+     end  
+   end
+  
+  desc 'Deletes the compiled code.'
+  task :clean do
+    puts 'Cleaning previous builds'
+    FileUtils.rm_rf('build')
+    sh 'xcodebuild -alltargets clean'
+  end   
+
+  desc 'Compiles the project using the Debug configuration.'
+  task :compile => [:analyze, :documentation] do
+    puts 'Compiling App in Debug scheme'
+    sh 'xcodebuild  -sdk iphonesimulator -configuration Debug'
+  end  
+  
+  desc 'Compiles the project using the Release configuration.'
+  task :release => [:documentation, :compile_tests] do
+    puts 'Compiling app for Release'
+    sh 'xcodebuild -configuration Release'
+  end
+  
+  task :run => :compile do
+    sh "waxsim build/Debug-iphonesimulator/#{PROJECT_NAME}.app"
+  end
+  
+  desc 'Compiles the Tests target'
+  task :compile_tests => [:clean] do
+    if File.exists? TESTS_DIR 
+      puts 'Compiling Tests in Debug scheme'
+      sh 'xcodebuild -target Tests -sdk iphonesimulator -configuration Debug'
+    else
+      puts 'The project has no tests.'  
+    end 
+  end
+  
+  desc 'Run the tests'
+  task :run_tests => :compile_tests do
+    if File.exists? TESTS_DIR 
+      create_dir_if_not_exists DOCS_DIR
+      ENV['GHUNIT_CLI'] = 'YES'
+      ENV['WRITE_JUNIT_XML'] = 'YES'
+      ENV['GHUNIT_AUTORUN']  = 'YES'
+      ENV['GHUNIT_AUTOEXIT']  = 'YES'
+      system('waxsim build/Debug-iphonesimulator/Tests.app') 
+      move_tests_reports     
+    end
+  end
+
+end
+
+def setup_framework( name, git_url )
+  puts "Installing #{name} into Libraries folder."
+  sh "cd ../../ && git submodule add #{git_url} code/#{PROJECT_NAME}/Libraries/#{name}"
+end  
+
+def move_analysis_reports
+  create_dir_if_not_exists CLANG_REPORTS_DIR
+  dir_pattern = "#{DOCS_DIR}/#{Date.today.to_s}-*"  
+  Dir[ dir_pattern ].each{ |file|   
+    FileUtils.cp_r( "#{file}/.", "#{CLANG_REPORTS_DIR}")
+    FileUtils.rm_rf( file )  
+  }
+end
+
+def move_tests_reports   
+  FileUtils.rm_rf TESTS_REPORTS_DIR
+  create_dir_if_not_exists DOCS_DIR
+  create_dir_if_not_exists TESTS_REPORTS_DIR
+  tmp_dir = `/usr/bin/getconf DARWIN_USER_TEMP_DIR`
+  FileUtils.cp_r( "#{tmp_dir.strip}/test-results/.", "#{TESTS_REPORTS_DIR}")    
+  puts "Tests reports generated in #{TESTS_REPORTS_DIR}"
+end
+
+
+def create_dir_if_not_exists( dir_name )
+  if !File.exists? dir_name
+    FileUtils.mkdir dir_name  
+  end  
+end  

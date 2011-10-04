@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>--input</key>
+		<array>
+			<string>___PACKAGENAMEASIDENTIFIER___</string>
+		</array>
+		<key>--ignore</key>
+		<array>
+			<string>Libraries</string>
+			<string>Frameworks</string>
+			<string>Tests</string>
+		</array>
+		<key>--project-name</key>
+		<string>___PROJECTNAME___</string>
+		<key>--company-id</key>
+		<string>raku</string>
+		<key>--project-company</key>
+		<string>Raku</string>
+		<key>--create-docset</key>
+		<false/>
+		<key>--install-docset</key>
+		<false/>
+		<key>--output</key>
+		<string>../../docs/Code/appledoc</string>
+	</dict>	
+		
+</plist>	

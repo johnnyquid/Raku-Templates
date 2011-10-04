@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ancestors</key>
+	<array>
+		<string>raku.objectiveCApplication</string>
+		<string>raku.iPhoneBase</string>
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>../../../.gitignore</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Config</string>
+			</array>
+			<key>Path</key>
+			<string>.gitignore</string>	
+		</dict>
+		<key>../Rakefile</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Config</string>
+			</array>
+			<key>Path</key>
+			<string>Rakefile</string>	
+		</dict>
+		<key>../../../Readme.md</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Config</string>
+			</array>
+			<key>Path</key>
+			<string>Readme.md</string>	
+		</dict>
+		<key>../AppledocSettings.plist</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Config</string>
+			</array>
+			<key>Path</key>
+			<string>AppledocSettings.plist</string>	
+		</dict>
+		<key>Assets/Icons/AppIcon.png</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Assets</string>
+				<string>Icons</string>				
+			</array>
+			<key>Path</key>
+			<string>./Assets/Icons/AppIcon.png</string>	
+
+		</dict>
+		<key>Assets/Icons/AppIcon@2X.png</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Assets</string>
+				<string>Icons</string>				
+			</array>
+			<key>Path</key>
+			<string>./Assets/Icons/AppIcon@2X.png</string>	
+		</dict>
+		<key>Assets/Icons/AppIcon-72.png</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Assets</string>
+				<string>Icons</string>				
+			</array>
+			<key>Path</key>
+			<string>./Assets/Icons/AppIcon-72.png</string>	
+		</dict>
+		<key>Assets/Images/Default.png</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Assets</string>
+				<string>Images</string>				
+			</array>
+			<key>Path</key>
+			<string>./Assets/Images/Default.png</string>	
+		</dict>
+		<key>Assets/Images/Default@2X.png</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Assets</string>
+				<string>Images</string>				
+			</array>
+			<key>Path</key>
+			<string>./Assets/Images/Default@2X.png</string>	
+		</dict>
+		<key>Assets/Images/Default-Landscape.png</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Assets</string>
+				<string>Images</string>				
+			</array>
+			<key>Path</key>
+			<string>./Assets/Images/Default-Landscape.png</string>	
+		</dict>
+		<key>Assets/Images/Default-Portrait.png</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Assets</string>
+				<string>Images</string>				
+			</array>
+			<key>Path</key>
+			<string>./Assets/Images/Default-Portrait.png</string>	
+		</dict>
+		<key>Categories/README.md</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Categories</string>			
+			</array>
+			<key>Path</key>
+			<string>./Categories/README.md</string>	
+		</dict>
+		<key>Helpers/README.md</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Helpers</string>			
+			</array>
+			<key>Path</key>
+			<string>./Helpers/README.md</string>	
+		</dict>
+		<key>Models/README.md</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Models</string>			
+			</array>
+			<key>Path</key>
+			<string>./Models/README.md</string>	
+		</dict>
+		<key>Protocols/README.md</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Protocols</string>			
+			</array>
+			<key>Path</key>
+			<string>./Protocols/README.md</string>	
+		</dict>		
+		<key>*:viewControllerMethods</key>
+		<string>		
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+}
+</string>		
+		<key>*:*:importDDTTYLogger</key>
+		<string>#import &lt;CocoaLumberjackNSLogger/DDTTYLogger.h&gt;</string>
+		<key>*:*:importDDNSLoggerLogger</key>
+		<string>#import &lt;CocoaLumberjackNSLogger/DDNSLoggerLogger.h&gt;</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h</key>		
+		<dict>
+			<key>Group</key>
+			<string>Delegate</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:ivars</key>
+		<dict>
+			<key>Beginning</key>
+			<string>@interface RKU___PACKAGENAMEASIDENTIFIER___AppDelegate : NSObject &lt;UIApplicationDelegate&gt;
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:methods:window</key>
+		<string>@property (nonatomic, retain) IBOutlet UIWindow *window;
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m</key>
+		<dict>
+			<key>Group</key>
+			<string>Delegate</string>
+			<key>End</key>
+			<string>@end</string>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationDidBecomeActive</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (void)applicationDidBecomeActive:(UIApplication *)application
+{</string>
+			<key>End</key>
+			<string>}
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationDidBecomeActive:comments</key>
+		<string>/**
+ Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+ */
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationDidEnterBackground</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (void)applicationDidEnterBackground:(UIApplication *)application
+{</string>
+			<key>End</key>
+			<string>}
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationDidEnterBackground:comments</key>
+		<string>/**
+ Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+ If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+ */
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationLifecycle</key>
+		<string>
+/** Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.*/
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    
+}
+
+/**
+ Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+ If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
+ */
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    
+}
+
+/**
+ Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
+ */
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    
+}
+
+/**
+ Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+ */
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    
+}
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillEnterForeground</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (void)applicationWillEnterForeground:(UIApplication *)application
+{</string>
+			<key>End</key>
+			<string>}
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillEnterForeground:comments</key>
+		<string>/*
+ Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+ */
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillResignActive</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (void)applicationWillResignActive:(UIApplication *)application
+{</string>
+			<key>End</key>
+			<string>}
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillResignActive:comments</key>
+		<string>/**
+ Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+ Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+ */
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillTerminate</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (void)applicationWillTerminate:(UIApplication *)application
+{</string>
+			<key>End</key>
+			<string>}
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillTerminate:comments</key>
+		<string>/**
+ Called when the application is about to terminate.
+ Save data if appropriate.
+ See also applicationDidEnterBackground:.
+ */
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{</string>
+			<key>End</key>
+			<string>    return YES;
+}
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions:logger</key>
+		<string>
+//Adds the logger to the console (similar to nslog) 
+[DDLog addLogger:[DDTTYLogger sharedInstance]];
+//Adds the nslogger to log to the NSLogger desktop viewer 
+#ifdef DEBUG
+[DDLog addLogger:[DDNSLoggerLogger sharedInstance]];
+#endif	
+		</string>
+		
+		
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions:comments</key>
+		<string>/** Override point for customization after application launch.*/</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:implementation</key>
+		<string>@implementation RKU___PACKAGENAMEASIDENTIFIER___AppDelegate
+</string>
+		<key>Config/___PACKAGENAME___-Info.plist:NSMainNibFile</key>
+		<string>&lt;key&gt;NSMainNibFile&lt;/key&gt;
+&lt;string&gt;RKUMainWindow&lt;/string&gt;</string>
+		<key>Config/___PACKAGENAME___-Info.plist:iPhone</key>
+		<string>&lt;key&gt;CFBundleDisplayName&lt;/key&gt;
+&lt;string&gt;${PRODUCT_NAME}&lt;/string&gt;
+&lt;key&gt;CFBundleVersion&lt;/key&gt;
+&lt;string&gt;1.0&lt;/string&gt;
+&lt;key&gt;CFBundleShortVersionString&lt;/key&gt;
+&lt;string&gt;1.0&lt;/string&gt;
+&lt;key&gt;LSRequiresIPhoneOS&lt;/key&gt;
+&lt;true/&gt;</string>
+		<key>Config/___PACKAGENAME___-Prefix.pch:objC</key>
+		<string>
+#import &lt;CocoaLumberjackNSLogger/DDLog.h&gt;
+
+#import &lt;BlocksKitFramework/BlocksKit.h&gt;
+
+#ifdef DEBUG
+  static const int ddLogLevel = LOG_LEVEL_INFO;
+#else
+  static const int ddLogLevel = LOG_LEVEL_ERROR;
+#endif			
+		</string>	
+		<key>Config/___PACKAGENAME___-Prefix.pch:Availability:iPhoneAvailability</key>
+		<string>#import &lt;Availability.h&gt;
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+</string>
+
+		<key>main.m:main:UIApplicationMain</key>
+		<string>NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+int retVal = UIApplicationMain(argc, argv, nil, nil);
+[pool release];
+return retVal;
+</string>
+	</dict>
+	<key>Identifier</key>
+	<string>raku.cocoaTouchApplication</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Nodes</key>
+	<array>
+		<string>main.m:main:UIApplicationMain</string>
+		<string>../../../.gitignore</string>	
+		<string>../../../Readme.md</string>
+		<string>../Rakefile</string>
+		<string>../AppledocSettings.plist</string>		
+		<string>Assets/Icons/AppIcon.png</string>
+		<string>Assets/Icons/AppIcon@2X.png</string>
+		<string>Assets/Icons/AppIcon-72.png</string>
+		<string>Assets/Images/Default.png</string>
+		<string>Assets/Images/Default@2X.png</string>
+		<string>Assets/Images/Default-Landscape.png</string>
+		<string>Assets/Images/Default-Portrait.png</string>
+		<string>Categories/README.md</string>
+		<string>Config/___PACKAGENAME___-Info.plist:iPhone</string>
+		<string>Config/___PACKAGENAME___-Info.plist:NSMainNibFile</string>
+		<string>Config/___PACKAGENAME___-Prefix.pch:objC:importFoundation</string>
+		<string>Config/___PACKAGENAME___-Prefix.pch:Availability:iPhoneAvailability</string>
+		<string>Config/___PACKAGENAME___-Prefix.pch:objC</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:import:importCocoa</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:class</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:ivars</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:methods:window</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:import:RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:import:importDDTTYLogger</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:import:importDDNSLoggerLogger</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:implementation</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:synthesize:window = _window</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions:logger</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillResignActive:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationDidEnterBackground:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillEnterForeground:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationDidBecomeActive:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationWillTerminate:comments</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:dealloc:_window</string>		
+		<string>Helpers/README.md</string>
+		<string>Models/README.md</string>
+		<string>Protocols/README.md</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<string>true</string>
+			<key>Description</key>
+			<string>Indicates whether a unit test bundle should be created.</string>
+			<key>Identifier</key>
+			<string>includeUnitTests</string>
+			<key>Name</key>
+			<string>Include Unit Tests</string>
+			<key>SortOrder</key>
+			<integer>1</integer>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Units</key>
+			<dict>
+				<key>true</key>
+				<array>
+					<dict>
+						<key>Components</key>
+						<array>
+							<dict>
+								<key>Identifier</key>
+								<string>raku.ghUnitApplication</string>
+								<key>Name</key>
+								<string>Tests</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+		</dict>	
+	</array>
+	<key>Project</key>
+	<dict>
+		<key>Configurations</key>
+		<dict>
+			<key>Release</key>
+			<dict>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+			</dict>
+		</dict>
+		<key>SharedSettings</key>
+		<dict>
+			<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+			<string>iPhone Developer</string>
+			<key>ALWAYS_SEARCH_USER_PATHS</key>
+			<string>YES</string>
+			<key>OTHER_LDFLAGS</key>
+			<array>
+				<string>-ObjC</string>
+				<string>-all_load</string>
+			</array>	
+		</dict>
+	</dict>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>Frameworks</key>
+			<array>
+				<string>UIKit</string>
+				<string>Foundation</string>
+				<string>CoreGraphics</string>					
+				<string>CFNetwork</string>					
+				<string>SystemConfiguration</string>
+				<string>MessageUI</string>					
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

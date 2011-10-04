@@ -1,0 +1,3 @@
+[submodule "code/___PROJECTNAME___/Libraries/CocoaLumberjackNSLogger.framework"]
+	path = code/___PROJECTNAME___/Libraries/CocoaLumberjackNSLogger.framework
+	url = git@github.com:rakumx/CocoaLumberjackNSLogger.framework.git

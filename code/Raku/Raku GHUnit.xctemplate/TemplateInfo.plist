@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ancestors</key>
+	<array>
+		<string>raku.objectiveCApplication</string>
+		<string>raku.iPhoneBase</string>
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>Functional/RKUMyTest.h</key>
+		<dict>
+			<key>Group</key>
+			<string>Functional</string>
+			<key>Path</key>
+			<string>Functional/RKUMyTest.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>	
+		<key>Functional/RKUMyTest.m</key>
+		<dict>
+			<key>Group</key>
+			<string>Functional</string>
+			<key>Path</key>
+			<string>Functional/RKUMyTest.m</string>
+		</dict>
+		<key>Config/___PACKAGENAME___-Info.plist:iPhone</key>
+		<string>&lt;key&gt;CFBundleDisplayName&lt;/key&gt;
+&lt;string&gt;${PRODUCT_NAME}&lt;/string&gt;
+&lt;key&gt;CFBundleVersion&lt;/key&gt;
+&lt;string&gt;1.0&lt;/string&gt;
+&lt;key&gt;CFBundleShortVersionString&lt;/key&gt;
+&lt;string&gt;1.0&lt;/string&gt;
+&lt;key&gt;LSRequiresIPhoneOS&lt;/key&gt;
+&lt;true/&gt;</string>
+		<key>Config/___PACKAGENAME___-Prefix.pch:objC</key>
+		<string>
+#import &lt;CocoaLumberjackNSLogger/DDLog.h&gt;
+
+#import &lt;BlocksKitFramework/BlocksKit.h&gt;
+
+#import &lt;GHUnitIOS/GHUnit.h&gt;
+
+#ifdef DEBUG
+  static const int ddLogLevel = LOG_LEVEL_INFO;
+#else
+  static const int ddLogLevel = LOG_LEVEL_ERROR;
+#endif			
+		</string>	
+		<key>Config/___PACKAGENAME___-Prefix.pch:Availability:iPhoneAvailability</key>
+		<string>#import &lt;Availability.h&gt;
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+</string>
+
+		<key>main.m:main:UIApplicationMain</key>
+		<string>NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+int retVal = UIApplicationMain(argc, argv, nil, @"GHUnitIOSAppDelegate");
+[pool release];
+return retVal;
+</string>
+	</dict>
+	<key>Identifier</key>
+	<string>raku.ghUnitApplication</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Nodes</key>
+	<array>
+		<string>main.m:main:UIApplicationMain</string>
+		<string>Functional/RKUMyTest.h</string>
+		<string>Functional/RKUMyTest.m</string>	
+		<string>Config/___PACKAGENAME___-Info.plist:iPhone</string>
+		<string>Config/___PACKAGENAME___-Prefix.pch:objC:importFoundation</string>
+		<string>Config/___PACKAGENAME___-Prefix.pch:Availability:iPhoneAvailability</string>
+		<string>Config/___PACKAGENAME___-Prefix.pch:objC</string>
+	</array>	
+	<key>Project</key>
+	<dict>
+		<key>Configurations</key>
+		<dict>
+			<key>Release</key>
+			<dict>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+			</dict>
+		</dict>
+		<key>SharedSettings</key>
+		<dict>
+			<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+			<string>iPhone Developer</string>
+			<key>ALWAYS_SEARCH_USER_PATHS</key>
+			<string>YES</string>
+			<key>OTHER_LDFLAGS</key>
+			<array>
+				<string>-ObjC</string>
+				<string>-all_load</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>Frameworks</key>
+			<array>
+				<string>UIKit</string>
+				<string>Foundation</string>
+				<string>CoreGraphics</string>					
+				<string>CFNetwork</string>					
+				<string>SystemConfiguration</string>					
+				<string>MessageUI</string>					
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

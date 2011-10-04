@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>This template provides the Raku Common Libraries</string>
+	<key>Identifier</key>
+	<string>raku.commonLibraries</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+<key>Definitions</key>
+<dict>
+  	<key>Libraries/Lumberjack/DDLog.h</key>
+	<dict>
+		<key>Group</key>
+		<array>
+			<string>Libraries</string>
+			<string>Lumberjack</string>
+		</array>
+		<key>Path</key>
+		<string>./Libraries/Lumberjack/DDLog.h</string>
+		<key>PathType</key>
+		<string>Group</string>
+		<key>TargetIndices</key>
+		<array/>
+	</dict>
+	<key>Libraries/Lumberjack/DDLog.m</key>
+	<dict>
+		<key>Group</key>
+		<array>
+			<string>Libraries</string>
+			<string>Lumberjack</string>
+		</array>
+		<key>Path</key>
+		<string>./Libraries/Lumberjack/DDLog.m</string>
+		<key>PathType</key>
+		<string>Group</string>
+	</dict>
+</dict>
+<key>Nodes</key>
+<array>
+  	<string>Libraries/Lumberjack/DDLog.h</string>
+	<string>Libraries/Lumberjack/DDLog.m</string>
+</array>
+<key>Targets</key>
+<array>
+	<dict>
+		<key>Frameworks</key>
+		<array>
+			<string>CFNetwork</string>
+			<string>SystemConfiguration</string>
+		</array>
+	</dict>
+</array>
+</dict>
+</plist>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ancestors</key>
+	<array>
+		<string>raku.cocoaTouchFamiliedApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Definitions</key>
+	<dict>		
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:methods:viewController</key>
+		<string>@property (nonatomic, retain) IBOutlet RKU___PACKAGENAMEASIDENTIFIER___ViewController *viewController;
+</string>
+		<key>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup</key>
+		<string> 
+self.window.rootViewController = self.viewController;
+[self.window makeKeyAndVisible];
+</string>
+		<key>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<string>Controllers</string>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___ViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses a single view. It provides a view controller to manage the view, and a nib file that contains the view.</string>
+	<key>Identifier</key>
+	<string>raku.viewBasedApplication</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Nodes</key>
+	<array>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:class:RKU___PACKAGENAMEASIDENTIFIER___ViewController</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.h:methods:viewController</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:import:RKU___PACKAGENAMEASIDENTIFIER___ViewController.h</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:synthesize:viewController = _viewController</string>
+		<string>Delegate/RKU___PACKAGENAMEASIDENTIFIER___AppDelegate.m:dealloc:_viewController</string>
+		<string>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.h</string>
+		<string>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.m</string>
+		<string>Views/en.lproj/RKU___PACKAGENAMEASIDENTIFIER___ViewController.xib</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>deviceFamily</string>
+			<key>Units</key>
+			<dict>
+				<key>iPad</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.m</key>
+						<dict>
+							<key>Group</key>
+							<string>Controllers</string>
+							<key>Path</key>
+							<string>___PACKAGENAMEASIDENTIFIER___ViewControlleriPad.m</string>
+						</dict>
+						<key>Views/en.lproj/RKUMainWindow.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>MainWindowiPad.xib</string>
+						</dict>
+						<key>Views/en.lproj/RKU___PACKAGENAMEASIDENTIFIER___ViewController.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>							
+							<key>Path</key>
+							<string>___PACKAGENAMEASIDENTIFIER___ViewControlleriPad.xib</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>iPhone</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>Controllers/RKU___PACKAGENAMEASIDENTIFIER___ViewController.m</key>
+						<dict>
+							<key>Group</key>
+							<string>Controllers</string>							
+							<key>Path</key>
+							<string>___PACKAGENAMEASIDENTIFIER___ViewControlleriPhone.m</string>
+						</dict>
+						<key>Views/en.lproj/RKUMainWindow.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>MainWindowiPhone.xib</string>
+						</dict>
+						<key>Views/en.lproj/RKU___PACKAGENAMEASIDENTIFIER___ViewController.xib</key>
+						<dict>
+							<key>Group</key>
+							<string>Views</string>
+							<key>Path</key>
+							<string>___PACKAGENAMEASIDENTIFIER___ViewControlleriPhone.xib</string>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
