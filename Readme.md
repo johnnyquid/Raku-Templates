@@ -20,13 +20,13 @@ The project must be placed inside the code folder.
 
 Once the project is created, inside the root (Project folder in this example) execute the following git commands:
 
-git init
-git add *.gitignore
-git add *
+- git init
+- git add *.gitignore
+- git add *
 
 Then, inside the code/Project folder execute
 
-rake ios:setup_dependencies
+`rake ios:setup_dependencies`
 
 This command will download the dependencies into the Libraries folder. Drag and Drop the folders into the project in Xcode, in the folder "Frameworks".
 
