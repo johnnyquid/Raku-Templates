@@ -6,7 +6,7 @@ To install them, copy the content of the code/Raku folder into ~/Library/Develop
 
 The content of code/tools must be in ~/.raku/tools.
 
-In the download section you can find an installer that automate this process.
+In the downloads section you can find an installer that automates this process.
 
 Instructions
 ____________
